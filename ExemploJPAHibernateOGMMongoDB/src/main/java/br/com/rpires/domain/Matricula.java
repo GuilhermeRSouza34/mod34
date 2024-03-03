@@ -12,10 +12,6 @@ import javax.persistence.Table;
 
 import br.com.rpires.domain.converter.InstantConverter;
 
-/**
- * @author rodrigo.pires
- *
- */
 @Entity
 @Table(name = "OGM_TB_MATRICULA")
 public class Matricula {
@@ -23,25 +19,25 @@ public class Matricula {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+
 	@Column(name = "CODIGO", length = 10, nullable = false, unique = true)
 	private String codigo;
-	
+
 	@Convert(converter = InstantConverter.class)
 	@Column(name = "DATA_MATRICULA", nullable = false)
 	private Instant dataMatricula;
-	
+
 	@Column(name = "valor", nullable = false)
 	private Double valor;
-	
+
 	@Column(name = "status", nullable = false)
 	private String status;
-	
-//	@ManyToOne
-//	@JoinColumn(name = "id_curso_fk", 
-//		foreignKey = @ForeignKey(name = "fk_curso_matricula"), 
-//		referencedColumnName = "id", nullable = false)
-//	private Curso curso;
+
+	// @ManyToOne
+	// @JoinColumn(name = "id_curso_fk",
+	// foreignKey = @ForeignKey(name = "fk_curso_matricula"),
+	// referencedColumnName = "id", nullable = false)
+	// private Curso curso;
 
 	public Long getId() {
 		return id;
@@ -83,13 +79,12 @@ public class Matricula {
 		this.status = status;
 	}
 
-//	public Curso getCurso() {
-//		return curso;
-//	}
-//
-//	public void setCurso(Curso curso) {
-//		this.curso = curso;
-//	}
-	
-	
+	// public Curso getCurso() {
+	// return curso;
+	// }
+	//
+	// public void setCurso(Curso curso) {
+	// this.curso = curso;
+	// }
+
 }

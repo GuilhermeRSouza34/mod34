@@ -12,27 +12,22 @@ import dev.morphia.annotations.Id;
 import dev.morphia.annotations.Property;
 import dev.morphia.annotations.Reference;
 
-
-/**
- * @author rodrigo.pires
- *
- */
 @Entity
 public class Curso {
 
 	@Id
 	private String id;
-	
+
 	private String codigo;
-	
+
 	private String nome;
-	
+
 	private String descricao;
-	
+
 	@Embedded
-//	@Reference
+	// @Reference
 	private List<Matricula> matriculas;
-	
+
 	public String getId() {
 		return id;
 	}
@@ -79,7 +74,5 @@ public class Curso {
 		}
 		this.matriculas.add(matric);
 	}
-	
-	
-	
+
 }

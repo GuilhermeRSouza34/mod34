@@ -14,19 +14,18 @@ import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 
-/**
- * @author rodrigo.pires
- *
- */
 @Configuration
 @EnableMongoRepositories(basePackages = "br.com.rpires.repository")
 public class MongoConfig {
 
-	@Bean
+    @Bean
     public MongoClient mongo() throws Exception {
-        //final ConnectionString connectionString = new ConnectionString("mongodb://localhost:27017/ebac");
-		final ConnectionString connectionString = new ConnectionString("mongodb://admin:admin@127.0.0.1:27017/ebac?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false");
-        final MongoClientSettings mongoClientSettings = MongoClientSettings.builder().applyConnectionString(connectionString).build();
+        // final ConnectionString connectionString = new
+        // ConnectionString("mongodb://localhost:27017/ebac");
+        final ConnectionString connectionString = new ConnectionString(
+                "mongodb://admin:admin@127.0.0.1:27017/ebac?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false");
+        final MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
+                .applyConnectionString(connectionString).build();
         return MongoClients.create(mongoClientSettings);
     }
 

@@ -8,12 +8,8 @@ import java.time.Instant;
 import javax.persistence.AttributeConverter;
 import javax.persistence.Convert;
 
-/**
- * @author rodrigo.pires
- *
- */
 @Convert
-public class InstantConverter implements AttributeConverter<Instant, String>{
+public class InstantConverter implements AttributeConverter<Instant, String> {
 
 	@Override
 	public String convertToDatabaseColumn(Instant attribute) {

@@ -15,17 +15,13 @@ import br.com.rpires.config.MongoConfig;
 import br.com.rpires.domain.Curso;
 import br.com.rpires.repository.ICursoRepository;
 
-/**
- * @author rodrigo.pires
- *
- */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = MongoConfig.class)
 public class CursoRepositoryTest {
 
 	@Autowired
 	private ICursoRepository cursoRepository;
-	
+
 	@Test
 	public void cadastrar() {
 		Curso curso = new Curso();
@@ -33,7 +29,7 @@ public class CursoRepositoryTest {
 		curso.setDescricao("CURSO TESTE - Spring data e mongoDB");
 		curso.setNome("Curso de Java Backend");
 		curso = cursoRepository.insert(curso);
-		
+
 		assertNotNull(curso);
 	}
 }

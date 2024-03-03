@@ -8,22 +8,18 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-/**
- * @author rodrigo.pires
- *
- */
 @Document(collection = "Curso_spd")
 public class Curso {
 
 	@Id
 	private String id;
-	
+
 	private String codigo;
-	
+
 	private String nome;
-	
+
 	private String descricao;
-	
+
 	private List<Matricula> matriculas;
 
 	public String getId() {
@@ -65,7 +61,5 @@ public class Curso {
 	public void setMatriculas(List<Matricula> matriculas) {
 		this.matriculas = matriculas;
 	}
-	
-	
-	
+
 }

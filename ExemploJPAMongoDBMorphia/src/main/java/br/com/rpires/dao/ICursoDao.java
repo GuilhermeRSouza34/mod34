@@ -7,10 +7,6 @@ import java.util.List;
 
 import br.com.rpires.domain.Curso;
 
-/**
- * @author rodrigo.pires
- *
- */
 public interface ICursoDao {
 
 	public Curso cadastrar(Curso curso);

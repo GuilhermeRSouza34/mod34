@@ -5,25 +5,20 @@ import java.time.Instant;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
-/**
- * @author rodrigo.pires
- *
- */
 @Document(collection = "Matricula_spd")
 public class Matricula {
 
 	@Id
 	private String id;
-	
+
 	private String codigo;
-	
+
 	private Instant dataMatricula;
-	
+
 	private Double valor;
-	
+
 	private String status;
-	
+
 	private Curso curso;
 
 	public String getId() {
@@ -73,6 +68,5 @@ public class Matricula {
 	public void setCurso(Curso curso) {
 		this.curso = curso;
 	}
-	
-	
+
 }

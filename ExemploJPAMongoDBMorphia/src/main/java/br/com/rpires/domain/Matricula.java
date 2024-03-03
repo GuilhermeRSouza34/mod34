@@ -5,25 +5,20 @@ import java.time.Instant;
 import dev.morphia.annotations.Entity;
 import dev.morphia.annotations.Id;
 
-
-/**
- * @author rodrigo.pires
- *
- */
 @Entity
 public class Matricula {
 
 	@Id
 	private String id;
-	
+
 	private String codigo;
-	
+
 	private Instant dataMatricula;
-	
+
 	private Double valor;
-	
+
 	private String status;
-	
+
 	private Curso curso;
 
 	public String getId() {
@@ -73,6 +68,5 @@ public class Matricula {
 	public void setCurso(Curso curso) {
 		this.curso = curso;
 	}
-	
-	
+
 }
